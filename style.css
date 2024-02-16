@@ -5,8 +5,8 @@
 }
 header {
   height: 100px;
-  background-color: blue;
-  border-radius: 10px;
+  background-color: black;
+  //border-radius: 10px;
 }
 body {
   background-color: black;
