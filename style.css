@@ -1,13 +1,22 @@
 * {
-  padding: 0px;
-  margin: 0px;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
-
+section {
+  height: 25vh;
+}
+h1 {
+  position: absolute;
+  top: 15%;
+  left: 22%;
+  color: rgb(243, 202, 20);
+  font-size: 5rem;
+  letter-spacing: 0.1rem;
+}
 h1 span {
   opacity: 0;
   display: inline-block;
-  animation: anime 0.1s linear forwards;
+  animation: anime 1s linear forwards;
 }
 @keyframes anime {
   0% {
@@ -87,7 +96,7 @@ header h1 {
 }
 nav ul {
   list-style-type: none;
-  padding-top: 100px;
+  padding-top: 350px;
 }
 nav li {
   display: inline;
@@ -224,4 +233,65 @@ footer p {
   font-weight: bold;
   font-family: monospace;
   text-shadow: black 4px 4px 5px;
+}
+/*Button start*/
+.codepen-button {
+  display: block;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  margin: 0 auto;
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 50px;
+  overflow: hidden;
+  padding: 3px;
+  isolation: isolate;
+  box-shadow: #ffd903 0 10px 20px;
+}
+
+.codepen-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    #4fcf70,
+    #fad648,
+    #a767e5,
+    #12bcfe,
+    #44ce7b
+  );
+  background-size: 25% 100%;
+  animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop
+    0.75s linear infinite;
+  animation-play-state: paused;
+  translate: -5% 0%;
+  transition: translate 0.25s ease-out;
+}
+
+.codepen-button:hover::before {
+  animation-play-state: running;
+  transition-duration: 0.75s;
+  translate: 0% 0%;
+}
+
+@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+  to {
+    transform: translateX(-25%);
+  }
+}
+.codepen-button span {
+  position: relative;
+  text-align: center;
+  font-family: monospace;
+  display: block;
+  padding: 1rem 1.5rem;
+  font-size: 3.1rem;
+  /*background: #000;*/
+  border-radius: 10px;
+  height: 100%;
 }
